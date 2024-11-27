@@ -1,0 +1,39 @@
+@import url("index.css");
+
+.section__intro__top{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    place-content: center;
+    gap: 30px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.section__intro__top::after{
+    background: rgb(17,11,115);
+    background: linear-gradient(307deg, #073455e4 0%, #0b446dea 22%, #073455de 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+}
+
+.section__intro__top h1{
+    font-size: 5.9vw;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    font-weight: 800;
+}
+
+.section__intro__top small{
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    font-weight: 500;
+}

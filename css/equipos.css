@@ -1,0 +1,117 @@
+@import url("index.css");
+
+.section__intro__top{
+    background-image: url("https://religion.elconfidencialdigital.com/media/religionconfidencial/images/2024/03/29/2024032923435637800.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    display: grid;
+    place-content: center;
+    gap: 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.section__intro__top::after{
+    background: rgb(17,11,115);
+    background: linear-gradient(307deg, #073455e4 0%, #0b446dea 22%, #073455de 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+}
+
+.section__intro__top h1{
+    text-transform: uppercase;
+    font-weight: 800;
+    position: relative;
+    z-index: 10;
+}
+
+.section__intro__top small{
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    font-weight: 503;
+}
+
+
+/* ==================== section__teams ==================== */
+
+.section__teams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 80px;
+}
+
+.section__teams .card__team {
+    background-color: #fff;
+    color: #272727;
+    display: grid;
+    border-radius: 10px;
+    transition: all ease-in-out 1s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+
+.section__teams .card__team .card__image {
+    height: 220px;
+    position: relative;
+}
+
+.section__teams .card__team .card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.section__teams .card__team .card__image::after {
+    content: "";
+    background-color: transparent; /* Color inicial invisible */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: all ease-in-out .5s;
+}
+
+.section__teams .card__team:hover .card__image::after {
+    background-color: #0b446da5; /* Color visible al hacer hover */
+}
+
+.section__teams .card__team .card__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #555555;
+}
+
+
+.section__teams .card__team .card__content a{
+    margin-top: 16px;
+    font-size: 14px;
+    color: #073455;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 992px){
+    .section__teams{
+        padding: 40px;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section__teams{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
